@@ -14,8 +14,9 @@ export DESKTOP=/usr/share/applications/tauonmb.desktop
 export DEPLOY_SYS_PYTHON=1
 export DEPLOY_PIPEWIRE=1
 export DEPLOY_SDL=1
+
 # Deploy dependencies
-quick-sharun /usr/bin/tauonmb /usr/bin/tauon
+quick-sharun /usr/bin/tauonmb /usr/bin/tauon /usr/lib/libgtk-3.so*
 
 # Additional changes can be done in between here
 
