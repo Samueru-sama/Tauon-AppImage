@@ -6,7 +6,7 @@ ARCH=$(uname -m)
 
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
-# pacman -Syu --noconfirm PACKAGESHERE
+pacman -Syu --noconfirm tauon-music-box python-pychromecast python-tekore python-tidalapi librespot python-plexapi unrar 7zip python-jxlpy python-pypresence
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
