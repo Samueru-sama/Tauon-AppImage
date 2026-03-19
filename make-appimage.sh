@@ -19,7 +19,7 @@ find /usr/lib/python*/site-packages \
 	-type f -name '*.py' -exec sed -i -e 's|/snap/|/|g' {} \;
 
 # Deploy dependencies
-quick-sharun /usr/bin/tauonmb /usr/bin/tauon /usr/lib/libgtk-3.so*
+quick-sharun /usr/bin/tauonmb /usr/lib/libgtk-3.so*
 
 # Additional changes can be done in between here
 
