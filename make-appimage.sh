@@ -24,6 +24,7 @@ quick-sharun \
 	/usr/lib/libgtk-3.so*      \
 	/usr/lib/libgme.so*			\
 	/usr/lib/libwavpack.so*    \
+	/usr/lib/libnotify.so*		\
 	/usr/lib/libopusfile.so*	\
 	/usr/lib/libsamplerate.so* \
 	/usr/lib/libkissfft-float.so*
