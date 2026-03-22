@@ -19,6 +19,14 @@ export DEPLOY_SDL=1
 find /usr/lib/python*/site-packages \
 	-type f -name '*.py' -exec sed -i -e 's|/snap/|/|g' {} \;
 
+# PySDL3 has a nasty bug that it hardcodes loading libraries from /usr/lib
+# https://github.com/Aermoss/PySDL3/issues/35
+# It turns out that the workaround of setting SDL_BINARY_PATH prevents a crash
+# but the app still ends up loading /usr/lib/libSDL3.so instead of using the dynamic linker
+# what is worse is that this "fix" does not apply to libSDL3_image, so we have to make sure
+# SDL3_image loads when we load SDL
+patchelf --add-needed libSDL3_image.so /usr/lib/libSDL3.so
+
 # Deploy dependencies
 quick-sharun \
 	/usr/bin/tauonmb           \
