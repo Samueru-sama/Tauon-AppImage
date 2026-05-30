@@ -14,6 +14,7 @@ export DEPLOY_SYS_PYTHON=1
 export DEPLOY_PIPEWIRE=1
 export DEPLOY_OPENGL=1
 export DEPLOY_SDL=1
+export QUICK_SHARUN_DEBUG=1
 
 # fix bug making the app assume that it can write to its site-package dir
 find /usr/lib/python*/site-packages \
